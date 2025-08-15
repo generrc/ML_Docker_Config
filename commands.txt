@@ -1,0 +1,8 @@
+
+//This command builds the docker image
+sudo docker build --tag ml-docker .
+
+
+// This command runs the docker image and sves
+// MAKE SURE YOU SET IT TO YOUR DIRECTORY YOU WANT STUFF SAVED TO
+sudo docker run --rm -it --gpus all -v /home/your_linux_user/your_directory:/app -p 8888:8888 ml-docker
